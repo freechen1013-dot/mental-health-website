@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Health in Action!</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="active">Mental Health in Action!</a>
+      <a href="about.html">About Us</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="intro">
+      <div class="flower-decor left">✿</div>
+      <div class="flower-decor right">❀</div>
+      <h1>Mental Health in Action!</h1>
+      <p>
+        All the tips we shown is only powerful when people actually takes action! So, share your experience of following our tips here! You can write about how you follow them, how effective are these tips, what can also be done alongside these tips, or even ask questions! You can also like and comment on other's experiences and appreciate their effort! After a week, the top 3 comments with most likes will stay on this website forever.
+      </p>
+    </section>
+
+    <div class="view-toggle">
+      <button class="active" data-view="recent" id="viewRecent">Recent Posts</button>
+      <button data-view="honored" id="viewHonored">Most Liked Stories</button>
+    </div>
+
+    <section class="comments-section">
+      <div class="comments-container" id="commentsContainer">
+        <div class="empty-state" id="emptyState">
+          <p>There's no comment yet, go ahead and bring your experience here!</p>
+          <span class="flower-empty">✿</span>
+        </div>
+      </div>
+
+      <div class="post-form" id="postForm">
+        <h3>Share Your Experience</h3>
+        <input type="text" id="postAuthor" placeholder="Your nickname" maxlength="30">
+        <textarea id="postContent" placeholder="Write about your experience..." rows="4"></textarea>
+        <label class="toggle-switch">
+          <span>Allow comments on your post</span>
+          <input type="checkbox" id="postCommentsToggle" checked>
+          <span class="slider"></span>
+        </label>
+        <button id="postSubmitBtn" class="btn-primary">Submit</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="overlay" class="overlay hidden"></div>
+
+  <div id="confirmDialog" class="dialog hidden">
+    <div class="dialog-content">
+      <p>The following content will be published, which means that everyone can see. You sure you want to publish this?</p>
+      <div class="dialog-preview" id="dialogPreview"></div>
+      <div class="dialog-buttons">
+        <button id="confirmContinue" class="btn-primary">Continue</button>
+        <button id="confirmClose" class="btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="warningDialog" class="dialog hidden">
+    <div class="dialog-content">
+      <p id="warningMessage"></p>
+      <button id="warningClose" class="btn-primary">OK</button>
+    </div>
+  </div>
+
+  <div id="successDialog" class="dialog hidden">
+    <div class="dialog-content">
+      <p id="successMessage">Content successfully sent!</p>
+      <button id="successClose" class="btn-primary">OK</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
